@@ -1,0 +1,16 @@
+<div class="agc-episodes">
+  <accordion *ngFor="let episode of episodes">
+
+    <accordion-group heading="{{episode.EpisodeNumber}} {{episode.Title}}">
+      <div class="agc-episodes__detail">
+        <div>
+          <img [src]="episode.Image">
+        </div>
+        <div>
+          <p>{{episode.Synopsis}}</p>
+        </div>
+      </div>
+    </accordion-group>
+
+  </accordion>
+</div>

@@ -1,0 +1,9 @@
+<div>
+  <tabset>
+    <tab *ngFor="let season of seasons; let idx = index" heading="T{{idx + 1}}">
+      <app-episodes [episodes]="season"></app-episodes>
+    </tab>
+  </tabset>
+</div>
+
+
