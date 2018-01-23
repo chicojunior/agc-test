@@ -1,8 +1,13 @@
 <div class="ac-shows">
   <div class="opacity-layer"></div>
-  <div class="row">
+  <div class="row show-presentation">
     <div class="col">
       <h1>{{tvShow.Title}}</h1>
+      <div class="show-info">
+        <p *ngFor="let genero of tvShow.Genres">{{genero.Title}}</p>
+        <span>/</span>
+        <p>{{tvShow.Year}}</p>
+      </div>
     </div>
     <div class="col-4">
       <app-seasons></app-seasons>
@@ -11,8 +16,11 @@
   
   <div class="row">
     <div class="col show-details">
-      <h3>Show Details</h3>
+      <div>
+        <app-show-details #show [show]="tvShow"></app-show-details>
+      </div>
     </div>
   </div>
+
 </div>
 

@@ -27,4 +27,25 @@
     bottom: 0;
     width: 100%;
 	}
+
+	.show-presentation {
+		margin: 10px;
+
+		h1 {
+			font-weight: bold;
+		}
+
+		.show-info {
+			p,
+			span {
+				display: inline-block;
+			}
+	
+			p {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	
 }

@@ -20,7 +20,6 @@ export class SeasonsComponent implements OnInit {
      .getEpisodes()
      .subscribe(res => {
         this.seasons = this.groupBy(res, 'SeasonNumber');
-        console.log(this.seasons);
       });
   }
 
