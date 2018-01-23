@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 import { AppService } from './app.service';
 
@@ -10,6 +10,9 @@ import { SeasonsComponent } from './seasons/seasons.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+  @Output() show: any = {};
+  
   title = 'app';
   tvShow: any = {};
 
@@ -20,12 +23,12 @@ export class AppComponent implements OnInit {
       .getShow()
       .subscribe(res => {
         this.tvShow = res;
-        console.log(JSON.stringify(res));
+        this.show = res;
+        console.log(this.show);
       });
   }
 
   getBackground(data) {
-    console.log(`"url('${data.Images.Background}')"`);
     return `url("${data.Images.Background}")`;
   }
 }

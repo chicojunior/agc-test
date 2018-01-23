@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-show-details',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowDetailsComponent implements OnInit {
 
+  @Input('show') show: any = {};
+
+  cast = [];
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.show);
   }
 
 }
